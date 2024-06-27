@@ -11,14 +11,14 @@ public class Ejecutar {
     public static void main(String[] args) {
         Presentacion p = new Presentacion();
         Validar v = new Validar();
-        float d1 = p.entrada("Ingrese el numerador");
+        float d1 = p.pedirDatos("Ingrese el numerador");
         float d2;
         do{
-            d2 = p.entrada("Ingrese el denominador");
+            d2 = p.pedirDatos("Ingrese el denominador");
         }while(!v.val(d2));
         Division d = new Division();
         d.setD1(d1);
         d.setD2(d2);
-        p.mostrar("El resultado es: "+ d.dividir());
+        p.mostrarRes("El resultado es: "+ d.dividir());
     }
 }
